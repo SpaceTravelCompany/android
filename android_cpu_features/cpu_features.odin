@@ -1,13 +1,12 @@
 package android_cpu_features
 
 import "core:c"
-import "shared:utils_private/library"
+import "engine:utils_private/library"
 
-@private LIB :: "/lib/android/libcpu-features" + library.ARCH_end
+@(private)
+LIB :: "/lib/android/libcpu-features" + library.ARCH_end
 
-foreign import lib {
-	LIB,
-}
+foreign import lib {LIB}
 
 /*
  * Copyright (C) 2010 The Android Open Source Project
@@ -54,7 +53,7 @@ Android_Cpu_Family :: enum c.int {
 	X86_64,
 	MIPS64,
 	RISCV64,
-	MAX,  /* do not remove */
+	MAX, /* do not remove */
 }
 
 foreign lib {
