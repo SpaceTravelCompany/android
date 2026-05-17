@@ -1,7 +1,7 @@
 package android_cpu_features
 
 import "core:c"
-import "engine:utils_private/library"
+import "shared:utils_private/library"
 
 @(private)
 LIB :: "/lib/android/libcpu-features" + library.ARCH_end
